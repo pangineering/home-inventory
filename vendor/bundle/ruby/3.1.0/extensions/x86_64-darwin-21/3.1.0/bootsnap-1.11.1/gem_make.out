@@ -1,0 +1,15 @@
+current directory: /Users/conan/Desktop/side_projects/home-inventory_v1/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.11.1/ext/bootsnap
+/usr/local/opt/ruby/bin/ruby -I /usr/local/lib/ruby/site_ruby/3.1.0 -r ./siteconf20220511-5109-irvgkf.rb extconf.rb
+creating Makefile
+
+current directory: /Users/conan/Desktop/side_projects/home-inventory_v1/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.11.1/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/conan/Desktop/side_projects/home-inventory_v1/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.11.1/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/conan/Desktop/side_projects/home-inventory_v1/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.11.1/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20220511-5109-xsva52/bootsnap
