@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_id: MyString
+  item_name: MyString
+  item_qty: 1
+  item_purchase_date: MyString
+
+two:
+  item_id: MyString
+  item_name: MyString
+  item_qty: 1
+  item_purchase_date: MyString
