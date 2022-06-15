@@ -1,2 +1,24 @@
-<h1>Inventory#index</h1>
-<p>Find me in app/views/inventory/index.html.erb</p>
+<h1>Inventory</h1>
+
+
+
+
+    <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Item Number</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Item Qty</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @inventory.each do |inv| %>
+    <tr>
+      <th scope="row"><%= inv.item_id %></th>
+      <td><%= inv.item_name %></td>
+      <td><%= inv.item_qty %></td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
+
