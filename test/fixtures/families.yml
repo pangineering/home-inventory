@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fam_id: MyString
+  fam_name: MyString
+
+two:
+  fam_id: MyString
+  fam_name: MyString

@@ -1,0 +1,22 @@
+<%= form_with model: @inventory, url: edit_inventory_path(@inventory), method: :patch do |form| %>
+  <div>
+    <%= form.label :item_id %><br>
+    <%= form.text_field :item_id, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label :item_name %><br>
+    <%= form.text_field :item_name, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label :item_qty %><br>
+    <%= form.number_field :item_qty, in: 1..20, step: 1, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label :item_purchase_date %><br>
+    <%= form.text_field :item_purchase_date, class: "form-control" %>
+  </div>
+  <br />
+  <div>
+    <%= form.submit class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>

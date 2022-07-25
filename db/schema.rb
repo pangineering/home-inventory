@@ -10,12 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_15_133210) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_25_092957) do
+  create_table "families", force: :cascade do |t|
+    t.string "fam_id"
+    t.string "fam_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "inventories", force: :cascade do |t|
     t.string "item_id"
     t.string "item_name"
     t.integer "item_qty"
     t.string "item_purchase_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.string "name"
+    t.string "role"
+    t.string "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string "title"
+    t.string "post_by"
+    t.string "body"
+    t.string "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shoppings", force: :cascade do |t|
+    t.string "date"
+    t.string "location"
+    t.string "total"
+    t.string "list"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

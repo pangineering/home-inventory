@@ -1,14 +1,16 @@
 <h1>Inventory</h1>
 
 
-
-
+<div style="margin-bottom: 5px">
+ <%= link_to 'Add', new_inventory_path, class: "btn btn-primary" %>
+</div>
     <table class="table table-dark">
   <thead>
     <tr>
       <th scope="col">Item Number</th>
       <th scope="col">Item Name</th>
       <th scope="col">Item Qty</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +19,9 @@
       <th scope="row"><%= inv.item_id %></th>
       <td><%= inv.item_name %></td>
       <td><%= inv.item_qty %></td>
+      <td>
+        <%= link_to 'Edit',edit_inventory_path(inv.item_id), class: "btn btn-warning" %> 
+      </td>
     </tr>
       <% end %>
   </tbody>
