@@ -7372,3 +7372,87 @@ Started POST "/member" for ::1 at 2022-07-25 22:11:59 +0700
   
 ActionController::RoutingError (No route matches [POST] "/member"):
   
+Started GET "/" for ::1 at 2022-07-25 22:30:20 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 526)
+Completed 200 OK in 12ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3643)
+
+
+Started GET "/" for ::1 at 2022-07-25 22:30:24 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 319)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1034)
+
+
+Started GET "/member" for ::1 at 2022-07-25 22:30:26 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 21643)
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 23352)
+
+
+Started GET "/..." for ::1 at 2022-07-25 22:30:26 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/new_member" for ::1 at 2022-07-25 22:30:28 +0700
+Processing by MemberController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/new.html.erb within layouts/application
+  Rendered member/_form.html.erb (Duration: 8.5ms | Allocations: 3222)
+  Rendered member/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 3517)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4805)
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 0.5ms | Allocations: 9255)
+
+
+Started POST "/member" for ::1 at 2022-07-25 22:30:31 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/member"):
+  
+Started GET "/rails/info/routes?path=" for ::1 at 2022-07-25 22:30:35 +0700
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>""}
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 3533)
+
+
+Started POST "/member" for ::1 at 2022-07-25 22:31:07 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/member"):
+  
+Started GET "/member" for ::1 at 2022-07-25 22:31:12 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 284)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2170)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 2962)
+
+
+Started GET "/..." for ::1 at 2022-07-25 22:31:12 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/new_member" for ::1 at 2022-07-25 22:31:13 +0700
+Processing by MemberController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/new.html.erb within layouts/application
+  Rendered member/_form.html.erb (Duration: 3.2ms | Allocations: 1617)
+  Rendered member/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1870)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3052)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3410)
+
+
+Started GET "/..." for ::1 at 2022-07-25 22:31:13 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started POST "/new_member" for ::1 at 2022-07-25 22:32:21 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/new_member"):
+  

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :families
+  resources :member
   #root "inventory#index", :as => "inventory"
   get 'inventory', to: "inventory#index", :as =>'inventory'
 
