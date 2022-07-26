@@ -1,1 +1,18 @@
 <h1>Add New Family Member</h1>
+<%= form_with model: @member, url: members_path, method: :patch do |form| %>  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label :role %><br>
+    <%= form.text_field :role, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label :gender %><br>
+    <%= form.select :gender, ["Male", "Female"] %>
+  </div>
+  <br />
+  <div>
+    <%= form.submit class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>

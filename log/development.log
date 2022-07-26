@@ -7456,3 +7456,1166 @@ Started POST "/new_member" for ::1 at 2022-07-25 22:32:21 +0700
   
 ActionController::RoutingError (No route matches [POST] "/new_member"):
   
+Started GET "/" for ::1 at 2022-07-26 10:38:19 +0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 526)
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 3643)
+
+
+Started GET "/" for ::1 at 2022-07-26 10:38:23 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 319)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1037)
+
+
+Started GET "/inventory" for ::1 at 2022-07-26 10:38:24 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.6ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 5823)
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 28760)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.0ms | Allocations: 30459)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"members"}, missing required keys: [:id]
+Did you mean?  member_url):
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', member_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', notification_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:29
+Started GET "/inventory" for ::1 at 2022-07-26 10:39:08 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/inventory/index.html.erb:17
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3429)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 6025)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms | Allocations: 7284)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"member"}, missing required keys: [:id]
+Did you mean?  member_url):
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', member_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', notification_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:29
+Started GET "/inventory" for ::1 at 2022-07-26 10:39:15 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3056)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 3326)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"member"}, missing required keys: [:id]
+Did you mean?  member_url):
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', member_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', notification_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:29
+Started GET "/" for ::1 at 2022-07-26 10:39:17 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 30)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/" for ::1 at 2022-07-26 10:39:21 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 240)
+
+
+Started GET "//brands" for ::1 at 2022-07-26 10:39:22 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/brands"):
+  
+Started GET "//brands" for ::1 at 2022-07-26 10:39:24 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/brands"):
+  
+Started GET "//member" for ::1 at 2022-07-26 10:39:26 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 292)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2923)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 4089)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"member"}, missing required keys: [:id]
+Did you mean?  member_url):
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', member_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', notification_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:29
+Started GET "//members" for ::1 at 2022-07-26 10:40:36 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/members"):
+  
+Started GET "/" for ::1 at 2022-07-26 10:41:46 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 33)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 303)
+
+
+Started GET "/" for ::1 at 2022-07-26 10:41:49 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 230)
+
+
+Started GET "/" for ::1 at 2022-07-26 10:41:51 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 230)
+
+
+Started GET "/inventory" for ::1 at 2022-07-26 10:41:51 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/inventory/index.html.erb:17
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3417)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6097)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms | Allocations: 7363)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"member"}, missing required keys: [:id]
+Did you mean?  member_url):
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', member_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', notification_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:29
+Started GET "/inventory" for ::1 at 2022-07-26 10:42:14 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/inventory/index.html.erb:17
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3408)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 6089)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms | Allocations: 7348)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"member"}, missing required keys: [:id]
+Did you mean?  member_url):
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', member_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', notification_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:29
+Started GET "/inventory" for ::1 at 2022-07-26 10:42:40 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2891)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 3750)
+
+
+Started GET "/members" for ::1 at 2022-07-26 10:42:42 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 290)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1903)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 3095)
+
+
+Started GET "/..." for ::1 at 2022-07-26 10:42:43 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/member/new" for ::1 at 2022-07-26 10:42:44 +0700
+Processing by MemberController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/new.html.erb within layouts/application
+  Rendered member/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1485)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 4309)
+
+
+Started GET "/member/new" for ::1 at 2022-07-26 10:43:05 +0700
+Processing by MemberController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/new.html.erb within layouts/application
+  Rendered member/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3330)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5012)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 5842)
+
+
+Started POST "/members" for ::1 at 2022-07-26 10:43:12 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/members"):
+  
+Started POST "/members" for ::1 at 2022-07-26 10:44:24 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/members"):
+  
+Started GET "/members" for ::1 at 2022-07-26 10:44:43 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 291)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 1895)
+Completed 200 OK in 14ms (Views: 10.7ms | Allocations: 3260)
+
+
+Started GET "/..." for ::1 at 2022-07-26 10:44:43 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/members" for ::1 at 2022-07-26 10:45:35 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 284)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2163)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 3004)
+
+
+Started GET "/..." for ::1 at 2022-07-26 10:45:36 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/member/new" for ::1 at 2022-07-26 10:45:37 +0700
+Processing by MemberController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/member_controller.rb:11:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering member/new.html.erb within layouts/application
+  Rendered member/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1668)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2843)
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 1.0ms | Allocations: 5476)
+
+
+Started POST "/members" for ::1 at 2022-07-26 10:45:41 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/members"):
+  
+Started POST "/members" for ::1 at 2022-07-26 10:47:08 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/members"):
+  
+Started POST "/members" for ::1 at 2022-07-26 10:48:40 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/members"):
+  
+Started GET "/members" for ::1 at 2022-07-26 10:48:42 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 337)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 21995)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 24988)
+
+
+Started GET "/..." for ::1 at 2022-07-26 10:48:42 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/member/new" for ::1 at 2022-07-26 10:48:44 +0700
+Processing by MemberController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/new.html.erb within layouts/application
+  Rendered member/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3326)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4631)
+Completed 200 OK in 13ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 9101)
+
+
+Started PATCH "/members" for ::1 at 2022-07-26 10:48:47 +0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/members"):
+  
+Started PATCH "/members" for ::1 at 2022-07-26 10:58:00 +0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220726035749_create_family_members.rb
+
+
+):
+  
+activerecord (7.0.3) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.3) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.3) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.3) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFamilyMembers (20220726035749)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "family_members" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "f_id" varchar, "m_id" varchar, "name" varchar, "dob" varchar, "role" varchar, "gender" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220726035749"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started PATCH "/members" for ::1 at 2022-07-26 10:58:57 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [PATCH] "/members"):
+  
+Started GET "/member" for ::1 at 2022-07-26 10:59:00 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 337)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 21468)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 24485)
+
+
+Started GET "/..." for ::1 at 2022-07-26 10:59:00 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/" for ::1 at 2022-07-26 10:59:01 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 326)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1135)
+
+
+Started GET "/inventory" for ::1 at 2022-07-26 10:59:04 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 5757)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 7695)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.6ms | Allocations: 9114)
+
+
+Started GET "/inventory/0001/edit" for ::1 at 2022-07-26 11:01:29 +0700
+Processing by InventoryController#edit as HTML
+  Parameters: {"item_id"=>"0001"}
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = ? LIMIT ?[0m  [["item_id", "0001"], ["LIMIT", 1]]
+  ↳ app/controllers/inventory_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/edit.html.erb within layouts/application
+  Rendered inventory/_form.html.erb (Duration: 5.9ms | Allocations: 3618)
+  Rendered inventory/edit.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3918)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5194)
+Completed 200 OK in 29ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 17770)
+
+
+Started GET "/members" for ::1 at 2022-07-26 11:01:32 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1867)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 2559)
+
+
+Started GET "/..." for ::1 at 2022-07-26 11:01:32 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/inventory" for ::1 at 2022-07-26 11:01:34 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 739)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2104)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 2397)
+
+
+Started GET "/inventory" for ::1 at 2022-07-26 11:03:34 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/inventory/index.html.erb:17
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3438)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5039)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.6ms | Allocations: 6339)
+
+
+Started GET "/members" for ::1 at 2022-07-26 11:03:35 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1730)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+Started GET "/..." for ::1 at 2022-07-26 11:03:35 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:04:04 +0700
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1759)
+Completed 200 OK in 4ms (Views: 2.7ms | Allocations: 3053)
+
+
+Started GET "/..." for ::1 at 2022-07-26 11:04:04 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:04:15 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MemberController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering member/index.html.erb within layouts/application
+  Rendered member/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 560)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 22413)
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 0.0ms | Allocations: 26434)
+
+
+Started GET "/..." for ::1 at 2022-07-26 11:04:15 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/inventory" for ::1 at 2022-07-26 11:04:16 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 5751)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 7386)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.6ms | Allocations: 8609)
+
+
+Started GET "/inventory" for ::1 at 2022-07-26 11:04:35 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/inventory/index.html.erb:17
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3405)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5027)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.7ms | Allocations: 6327)
+
+
+Started GET "/members" for ::1 at 2022-07-26 11:04:37 +0700
+  
+ActionController::RoutingError (uninitialized constant FamilyMemberController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FamilyMembersController
+               FamiliesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:05:08 +0700
+  
+ActionController::RoutingError (uninitialized constant FamilyMembesrController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FamilyMembersController
+               FamiliesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:05:12 +0700
+  
+ActionController::RoutingError (uninitialized constant FamilyMembesrController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FamilyMembersController
+               FamiliesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/..." for ::1 at 2022-07-26 11:05:12 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:05:24 +0700
+  
+ActionController::RoutingError (uninitialized constant FamilyMembesrController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FamilyMembersController
+               FamiliesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:06:01 +0700
+  
+ActionController::RoutingError (uninitialized constant FamilymembesrController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FamilyMembersController
+               FamiliesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:06:20 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/members"):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:06:24 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/members"):
+  
+Started GET "/..." for ::1 at 2022-07-26 11:06:24 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:06:42 +0700
+  
+ActionController::RoutingError (uninitialized constant FamilymembesrController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FamilyMembersController
+               FamiliesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:07:16 +0700
+  
+ArgumentError ('familyMembesr' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:18:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/members" for ::1 at 2022-07-26 11:07:30 +0700
+  
+ActionController::RoutingError (uninitialized constant FamilyMembesrController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FamilyMembersController
+               FamiliesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/members" for ::1 at 2022-07-26 11:07:44 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/family_members/index.html.erb:6
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:6
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2064)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 22951)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 0.4ms | Allocations: 25994)
+
+
+Started GET "/family_members/new" for ::1 at 2022-07-26 11:08:20 +0700
+Processing by FamilyMembersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/new.html.erb within layouts/application
+  Rendered family_members/_form.html.erb (Duration: 5.9ms | Allocations: 4161)
+  Rendered family_members/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4523)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5808)
+Completed 200 OK in 35ms (Views: 8.7ms | ActiveRecord: 0.6ms | Allocations: 21976)
+
+
+Started GET "/members" for ::1 at 2022-07-26 11:10:27 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 2890)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 3790)
+
+
+Started GET "/family_members/new" for ::1 at 2022-07-26 11:11:22 +0700
+Processing by FamilyMembersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/new.html.erb within layouts/application
+  Rendered family_members/_form.html.erb (Duration: 4.3ms | Allocations: 2686)
+  Rendered family_members/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3055)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4687)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 5557)
+
+
+Started GET "/family_members/new" for ::1 at 2022-07-26 11:11:43 +0700
+Processing by FamilyMembersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/new.html.erb within layouts/application
+  Rendered family_members/_form.html.erb (Duration: 3.4ms | Allocations: 2703)
+  Rendered family_members/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3071)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4702)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 5572)
+
+
+Started GET "/family_members/new" for ::1 at 2022-07-26 11:12:16 +0700
+Processing by FamilyMembersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/new.html.erb within layouts/application
+  Rendered family_members/_form.html.erb (Duration: 0.9ms | Allocations: 1623)
+  Rendered family_members/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1947)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2042)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2895)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: family_member) do |form| %>
+  <% if family_member.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(family_member.errors.count, "error") %> prohibited this family_member from being saved:</h2>
+
+      <ul>
+        <% family_member.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :f_id, style: "display: block" %>
+    <%= form.text_field :f_id %>
+  </div>
+
+  <div>
+    <%= form.label :m_id, style: "display: block" %>
+    <%= form.text_field :m_id %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :dob, style: "display: block" %>
+    <%= form.text_field :dob %>
+  </div>
+
+  <div>
+    <%= form.label :role, style: "display: block" %>
+    <%= form.text_field :role %>
+  </div>
+
+  <div>
+    <%= form.label :gender, style: "display: block" %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div>
+    <%= form.submit class: "btn btn-primary" text: "Submit" %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: family_member) do |form| %>
+2:      <% if family_member.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(family_member.errors.count, "error") %> prohibited this family_member from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% family_member.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :f_id, style: "display: block" %>
+16:        <%= form.text_field :f_id %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :m_id, style: "display: block" %>
+21:        <%= form.text_field :m_id %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :name, style: "display: block" %>
+26:        <%= form.text_field :name %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.label :dob, style: "display: block" %>
+31:        <%= form.text_field :dob %>
+32:      </div>
+33:    
+34:      <div>
+35:        <%= form.label :role, style: "display: block" %>
+36:        <%= form.text_field :role %>
+37:      </div>
+38:    
+39:      <div>
+40:        <%= form.label :gender, style: "display: block" %>
+41:        <%= form.text_field :gender %>
+42:      </div>
+43:    
+44:      <div>
+45:        <%= form.submit class: "btn btn-primary" text: "Submit" %>
+46:      </div>
+47:    <% end %>
+  
+app/views/family_members/_form.html.erb:45: syntax error, unexpected local variable or method, expecting ')'
+app/views/family_members/_form.html.erb:45: syntax error, unexpected local variable or method, expecting ')'
+app/views/family_members/_form.html.erb:45: syntax error, unexpected local variable or method, expecting ')'
+app/views/family_members/_form.html.erb:45: syntax error, unexpected local variable or method, expecting ')'
+app/views/family_members/_form.html.erb:45: syntax error, unexpected local variable or method, expecting ')'
+app/views/family_members/_form.html.erb:45: syntax error, unexpected local variable or method, expecting ')'
+app/views/family_members/new.html.erb:3
+Started GET "/family_members/new" for ::1 at 2022-07-26 11:12:25 +0700
+Processing by FamilyMembersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/new.html.erb within layouts/application
+  Rendered family_members/_form.html.erb (Duration: 3.9ms | Allocations: 2715)
+  Rendered family_members/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3083)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4721)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 5581)
+
+
+Started GET "/family_members/new" for ::1 at 2022-07-26 11:13:25 +0700
+Processing by FamilyMembersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/new.html.erb within layouts/application
+  Rendered family_members/_form.html.erb (Duration: 4.3ms | Allocations: 2760)
+  Rendered family_members/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3128)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4759)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 5625)
+
+
+Started GET "/family_members/new" for ::1 at 2022-07-26 11:13:45 +0700
+Processing by FamilyMembersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/new.html.erb within layouts/application
+  Rendered family_members/_form.html.erb (Duration: 3.8ms | Allocations: 2784)
+  Rendered family_members/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4783)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 5649)
+
+
+Started GET "/shopping" for ::1 at 2022-07-26 11:21:18 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1839)
+Completed 200 OK in 6ms (Views: 4.5ms | Allocations: 3073)
+
+
+Started GET "/members" for ::1 at 2022-07-26 11:21:22 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/family_members/index.html.erb:8
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1781)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2956)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 3341)
+
+
+Started GET "/notification" for ::1 at 2022-07-26 11:21:25 +0700
+Processing by NotificationController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notification/index.html.erb within layouts/application
+  Rendered notification/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1851)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 2619)
+
+
+Started GET "/inventory" for ::1 at 2022-07-26 11:21:28 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4166)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5778)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.5ms | Allocations: 6975)
+
+
+Started GET "/members" for ::1 at 2022-07-26 11:22:34 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 816)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1991)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 2284)
+
+
+Started GET "/family_members/new" for ::1 at 2022-07-26 11:22:38 +0700
+Processing by FamilyMembersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/new.html.erb within layouts/application
+  Rendered family_members/_form.html.erb (Duration: 3.0ms | Allocations: 2144)
+  Rendered family_members/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2267)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3442)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3721)
+
+
+Started POST "/family_members" for ::1 at 2022-07-26 11:23:27 +0700
+Processing by FamilyMembersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "family_member"=>{"f_id"=>"F0001", "m_id"=>"M0001", "name"=>"John Doe", "dob"=>"20/8/1990", "role"=>"Father", "gender"=>"Male"}, "commit"=>"Create Family member"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/family_members_controller.rb:27:in `block in create'
+  [1m[36mFamilyMember Create (0.4ms)[0m  [1m[32mINSERT INTO "family_members" ("f_id", "m_id", "name", "dob", "role", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["f_id", "F0001"], ["m_id", "M0001"], ["name", "John Doe"], ["dob", "20/8/1990"], ["role", "Father"], ["gender", "Male"], ["created_at", "2022-07-26 04:23:27.749295"], ["updated_at", "2022-07-26 04:23:27.749295"]]
+  ↳ app/controllers/family_members_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/family_members_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/family_members/1
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms | Allocations: 3813)
+
+
+Started GET "/family_members/1" for ::1 at 2022-07-26 11:23:27 +0700
+Processing by FamilyMembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/family_members_controller.rb:63:in `set_family_member'
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/show.html.erb within layouts/application
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 332)
+  Rendered family_members/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1691)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2964)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 5679)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:23:33 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1096)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2273)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 2579)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:27:45 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1389)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3034)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 3883)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:28:45 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1358)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3010)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 3883)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:29:03 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 278)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1715)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3366)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 4237)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:29:15 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.6ms | Allocations: 278)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1768)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3412)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4284)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:29:41 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.6ms | Allocations: 278)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1759)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3403)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 4274)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:30:52 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 302)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1781)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3425)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4296)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:31:12 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 302)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1784)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3428)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 4299)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:31:44 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 325)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1816)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3460)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 4331)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:33:06 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.4ms | Allocations: 324)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1820)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3464)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4336)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:34:01 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 324)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1845)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3496)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4367)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:34:15 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 324)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1820)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3464)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4335)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:34:45 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 5.0ms | Allocations: 324)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 1826)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 3470)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.1ms | Allocations: 4341)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:47:12 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 990)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2172)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 2465)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:47:14 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2153)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2422)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:47:21 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 324)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1833)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3484)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4332)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:47:29 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.6ms | Allocations: 325)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1823)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3467)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 4339)
+
+
+Started GET "/family_members" for ::1 at 2022-07-26 11:47:38 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 324)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1831)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3475)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4346)
+
+
