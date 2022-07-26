@@ -1,0 +1,47 @@
+<%= form_with(model: feed) do |form| %>
+  <% if feed.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(feed.errors.count, "error") %> prohibited this feed from being saved:</h2>
+
+      <ul>
+        <% feed.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :f_id, style: "display: block" %>
+    <%= form.text_field :f_id %>
+  </div>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.text_field :body %>
+  </div>
+
+  <div>
+    <%= form.label :type, style: "display: block" %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.text_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :by, style: "display: block" %>
+    <%= form.text_field :by %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

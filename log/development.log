@@ -8619,3 +8619,341 @@ Processing by FamilyMembersController#index as HTML
 Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4346)
 
 
+Started GET "/notification" for ::1 at 2022-07-26 11:48:19 +0700
+Processing by NotificationController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notification/index.html.erb within layouts/application
+  Rendered notification/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1816)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2458)
+
+
+Started GET "/members" for ::1 at 2022-07-26 11:48:23 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1060)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2235)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 2528)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFeeds (20220726045030)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "feeds" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "f_id" varchar, "title" varchar, "body" varchar, "type" varchar, "date" varchar, "by" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220726045030"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/members" for ::1 at 2022-07-26 11:52:09 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.6ms | Allocations: 406)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 8131)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 29399)
+Completed 200 OK in 51ms (Views: 44.7ms | ActiveRecord: 0.6ms | Allocations: 33515)
+
+
+Started GET "/notification" for ::1 at 2022-07-26 11:52:11 +0700
+  
+ActionController::RoutingError (uninitialized constant FeedController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FeedsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:04:27 +0700
+  
+ActionController::RoutingError (uninitialized constant FeedController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FeedsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:04:50 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant FeedController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FeedsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:04:53 +0700
+  
+ActionController::RoutingError (uninitialized constant FeedController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FeedsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:05:00 +0700
+  
+ActionController::RoutingError (uninitialized constant FeedController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FeedsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:05:06 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant FeedController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FeedsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/members" for ::1 at 2022-07-26 14:07:17 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/family_members/index.html.erb:8
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 399)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 8405)
+  Rendered layout layouts/application.html.erb (Duration: 61.0ms | Allocations: 34792)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.8ms | Allocations: 37788)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `notification_path' for #<ActionView::Base:0x00000000013600>
+
+         '.freeze;@output_buffer.append=( link_to 'Notification', notification_path, class: 'nav-link' );@output_buffer.safe_append='
+                                                                  ^^^^^^^^^^^^^^^^^):
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', notification_path, class: 'nav-link' %>
+    33:       </li>
+    34:     </ul>
+    35:   </div>
+  
+app/views/layouts/application.html.erb:32
+Started GET "/members" for ::1 at 2022-07-26 14:07:32 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/family_members/index.html.erb:8
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4313)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 10780)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.9ms | Allocations: 12144)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `notification_path' for #<ActionView::Base:0x000000000192f8>
+
+         '.freeze;@output_buffer.append=( link_to 'Notification', notification_path, class: 'nav-link' );@output_buffer.safe_append='
+                                                                  ^^^^^^^^^^^^^^^^^):
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', notification_path, class: 'nav-link' %>
+    33:       </li>
+    34:     </ul>
+    35:   </div>
+  
+app/views/layouts/application.html.erb:32
+Started GET "/members" for ::1 at 2022-07-26 14:07:54 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.5ms | Allocations: 406)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 8119)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 29559)
+Completed 200 OK in 51ms (Views: 43.9ms | ActiveRecord: 0.6ms | Allocations: 33675)
+
+
+Started GET "/notification" for ::1 at 2022-07-26 14:07:59 +0700
+  
+ActionController::RoutingError (uninitialized constant FeedController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FeedsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:11:20 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/notification"):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:11:22 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/notification"):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:11:36 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/notification"):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:12:12 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/notification"):
+  
+Started GET "/notification" for ::1 at 2022-07-26 14:12:24 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/notification"):
+  
+Started GET "/member" for ::1 at 2022-07-26 14:12:29 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/member"):
+  
+Started GET "/..." for ::1 at 2022-07-26 14:12:29 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/" for ::1 at 2022-07-26 14:12:30 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 326)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 2420)
+
+
+Started GET "/family_members/new" for ::1 at 2022-07-26 14:12:31 +0700
+Processing by FamilyMembersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/new.html.erb within layouts/application
+  Rendered family_members/_form.html.erb (Duration: 8.1ms | Allocations: 4350)
+  Rendered family_members/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4746)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 27350)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.6ms | Allocations: 34500)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"feeds"}, missing required keys: [:id]):
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', feed_path, class: 'nav-link' %>
+    33:       </li>
+    34:     </ul>
+    35:   </div>
+  
+app/views/layouts/application.html.erb:32
+Started GET "/feed" for ::1 at 2022-07-26 14:12:32 +0700
+  
+ActionController::RoutingError (uninitialized constant FeedController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  FeedsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/feed" for ::1 at 2022-07-26 14:13:10 +0700
+  
+SyntaxError (/Users/conan/Desktop/github/home-inventory/config/routes.rb:13: syntax error, unexpected string literal, expecting `do' or '{' or '('
+  get 'new_inventory', to: "inventor...
+      ^
+/Users/conan/Desktop/github/home-inventory/config/routes.rb:13: syntax error, unexpected ',', expecting `end'
+  get 'new_inventory', to: "inventory#new"
+                     ^
+/Users/conan/Desktop/github/home-inventory/config/routes.rb:23: syntax error, unexpected `end', expecting end-of-input):
+  
+config/routes.rb:13: syntax error, unexpected string literal, expecting `do' or '{' or '('
+config/routes.rb:13: syntax error, unexpected ',', expecting `end'
+config/routes.rb:23: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:13: syntax error, unexpected string literal, expecting `do' or '{' or '('
+config/routes.rb:13: syntax error, unexpected ',', expecting `end'
+config/routes.rb:23: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:13: syntax error, unexpected string literal, expecting `do' or '{' or '('
+config/routes.rb:13: syntax error, unexpected ',', expecting `end'
+config/routes.rb:23: syntax error, unexpected `end', expecting end-of-input
+Started GET "/feed" for ::1 at 2022-07-26 14:13:38 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FeedsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1763)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 24615)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.1ms | Allocations: 28666)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"feeds"}, missing required keys: [:id]):
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+    30:       </li>
+    31:       <li class="nav-item">
+    32:          <%= link_to 'Notification', feed_path, class: 'nav-link' %>
+    33:       </li>
+    34:     </ul>
+    35:   </div>
+  
+app/views/layouts/application.html.erb:32
+Started GET "/feed" for ::1 at 2022-07-26 14:13:52 +0700
+Processing by FeedsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1224)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2877)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 3805)
+
+
+Started GET "/feeds/new" for ::1 at 2022-07-26 14:13:54 +0700
+Processing by FeedsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/new.html.erb within layouts/application
+  Rendered feeds/_form.html.erb (Duration: 7.5ms | Allocations: 4238)
+  Rendered feeds/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4597)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5883)
+Completed 200 OK in 21ms (Views: 10.7ms | ActiveRecord: 0.6ms | Allocations: 11732)
+
+
+Started GET "/shopping" for ::1 at 2022-07-26 14:14:52 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 164)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1814)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 3065)
+
+

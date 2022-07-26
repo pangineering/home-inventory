@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_26_035749) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_26_045030) do
   create_table "families", force: :cascade do |t|
     t.string "fam_id"
     t.string "fam_name"
@@ -25,6 +25,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_26_035749) do
     t.string "dob"
     t.string "role"
     t.string "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "feeds", force: :cascade do |t|
+    t.string "f_id"
+    t.string "title"
+    t.string "body"
+    t.string "type"
+    t.string "date"
+    t.string "by"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
