@@ -14097,3 +14097,171 @@ Processing by InventoryController#index as HTML
 Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 10082)
 
 
+Started GET "/inventory" for ::1 at 2022-07-27 11:18:20 +0700
+Processing by InventoryController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1113)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2871)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.5ms | Allocations: 5034)
+
+
+Started GET "/inventory" for ::1 at 2022-07-27 11:20:21 +0700
+Processing by InventoryController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1089)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2908)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 4534)
+
+
+Started GET "/inventory" for ::1 at 2022-07-27 11:22:18 +0700
+Processing by InventoryController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1088)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2896)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 4487)
+
+
+Started GET "/" for ::1 at 2022-07-27 11:23:11 +0700
+  
+ActionController::RoutingError (uninitialized constant LandingController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/inventory" for ::1 at 2022-07-27 11:24:41 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InventoryController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 4363)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 26168)
+Completed 200 OK in 56ms (Views: 38.1ms | ActiveRecord: 1.1ms | Allocations: 38186)
+
+
+Started GET "/" for ::1 at 2022-07-27 11:24:42 +0700
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1746)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3363)
+
+
+Started GET "/" for ::1 at 2022-07-27 11:32:30 +0700
+Processing by LandingController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 28.7ms | Allocations: 20007)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 20114)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.4ms | Allocations: 22354)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User id: 1, email: "panpan@mail.com", created_at: "2022-07-27 03:44:05.184249000 +0000", updated_at: "2022-07-27 03:44:05.184249000 +0000", confirmed_at: nil, password_digest: [FILTERED]>):
+    1: <h1>Home Inventory</h1>
+    2: <% if current_user.present?  %>
+    3: <h2><% current_user.name %></h2>
+    4: <% else %>
+    5: <%= link_to "Sign In", login_path, class: "btn btn-secondary" %>
+    6: <%= link_to "Sign Up", sign_up_path, class: "btn btn-secondary" %>
+  
+app/views/landing/index.html.erb:3
+Started GET "/" for ::1 at 2022-07-27 11:33:26 +0700
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 250)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2117)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 3751)
+
+
+Started GET "/" for ::1 at 2022-07-27 11:33:28 +0700
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1285)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 2368)
+
+
+Started GET "/" for ::1 at 2022-07-27 11:33:47 +0700
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 230)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2091)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 3617)
+
+
+Started GET "/" for ::1 at 2022-07-27 11:40:55 +0700
+Processing by LandingController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 233)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2093)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 4279)
+
+
+Started GET "/" for ::1 at 2022-07-27 11:42:14 +0700
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2094)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 3722)
+
+
+Started GET "/" for ::1 at 2022-07-27 11:42:37 +0700
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 238)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2105)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 3740)
+
+

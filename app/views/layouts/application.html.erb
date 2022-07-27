@@ -12,7 +12,8 @@
   <body>
   <!-- As a heading -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Home Inventory</a>
+
+   <%= link_to 'Home Inventory', root_path, class: 'nav-brand' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -33,6 +34,8 @@
          <%= link_to 'Feed', feeds_path, class: 'nav-link' %>
       </li>
     </ul>
+
+<%= link_to "Log Out", logout_path, class: "btn btn-danger" %>
   </div>
   <% end %>
 </nav>

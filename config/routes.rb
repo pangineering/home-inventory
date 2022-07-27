@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'landing/index'
   resources :buy_lists
   resources :feeds
   resources :family_members
