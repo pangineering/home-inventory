@@ -13877,3 +13877,208 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 5ms (Views: 3.7ms | Allocations: 3338)
 
 
+Started GET "/login" for ::1 at 2022-07-27 10:43:06 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 698)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1889)
+Completed 200 OK in 4ms (Views: 3.1ms | Allocations: 2953)
+
+
+Started GET "/sign_up" for ::1 at 2022-07-27 10:43:29 +0700
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_form_errors.html.erb (Duration: 0.0ms | Allocations: 29)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1268)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2461)
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 6222)
+
+
+Started POST "/sign_up" for ::1 at 2022-07-27 10:44:04 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"panpan@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "panpan@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "confirmed_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["email", "panpan@mail.com"], ["created_at", "2022-07-27 03:44:05.184249"], ["updated_at", "2022-07-27 03:44:05.184249"], ["confirmed_at", nil], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Redirected to http://localhost:3000/inventory
+Completed 302 Found in 196ms (ActiveRecord: 2.0ms | Allocations: 6509)
+
+
+Started GET "/inventory" for ::1 at 2022-07-27 10:44:05 +0700
+Processing by InventoryController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 569)
+
+
+Started GET "/login" for ::1 at 2022-07-27 10:44:05 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 600)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1722)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 2233)
+
+
+Started POST "/login" for ::1 at 2022-07-27 10:44:20 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"panpan@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "panpan@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 4625)
+
+
+  
+NameError (undefined local variable or method `new_confirmation_path' for #<SessionsController:0x00000000073820>
+
+          redirect_to new_confirmation_path, alert: "Incorrect email or password."
+                      ^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  new_inventory_path):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for ::1 at 2022-07-27 10:45:26 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"panpan@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "panpan@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.7ms | Allocations: 8211)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<SessionsController:0x0000000007a210>
+
+          redirect_to root_path, notice: "Signed in."
+                      ^^^^^^^^^
+Did you mean?  logout_path):
+  
+app/controllers/sessions_controller.rb:13:in `create'
+Started POST "/login" for ::1 at 2022-07-27 10:45:41 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"panpan@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "panpan@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/inventory
+Completed 302 Found in 178ms (ActiveRecord: 0.7ms | Allocations: 4957)
+
+
+Started GET "/inventory" for ::1 at 2022-07-27 10:45:43 +0700
+Processing by InventoryController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2908)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4304)
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 0.8ms | Allocations: 7024)
+
+
+Started GET "/feeds" for ::1 at 2022-07-27 10:46:09 +0700
+Processing by FeedsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2471)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 4599)
+
+
+Started GET "/members" for ::1 at 2022-07-27 10:46:09 +0700
+Processing by FamilyMembersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.8ms | Allocations: 390)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 5788)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7167)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.7ms | Allocations: 9311)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-27 10:46:10 +0700
+Processing by BuyListsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.2ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/_buy_list.html.erb (Duration: 3.1ms | Allocations: 335)
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 5674)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7051)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.7ms | Allocations: 9207)
+
+
+Started GET "/inventory" for ::1 at 2022-07-27 10:46:11 +0700
+Processing by InventoryController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 666)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1843)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 2869)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-27 10:46:14 +0700
+Processing by BuyListsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/_buy_list.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 799)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1976)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 2927)
+
+
+Started GET "/members" for ::1 at 2022-07-27 10:46:15 +0700
+Processing by FamilyMembersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 787)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1964)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 2910)
+
+
+Started GET "/inventory" for ::1 at 2022-07-27 10:46:18 +0700
+Processing by InventoryController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 665)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1842)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 2779)
+
+
