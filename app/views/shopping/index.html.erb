@@ -1,5 +1,6 @@
+<p style="color: green"><%= notice %></p>
 <h1>Shopping List</h1>
-<div style="margin-bottom: 5px"><button type="button" class="btn btn-primary">Add</button></div>
+<div style="margin-bottom: 5px"><%= link_to "New Shopping List", new_shopping_path, class: "btn btn-primary"  %></div>
 <div class="card" style="width: 18rem;">
   <div class="card-header">
 Card title
@@ -19,3 +20,24 @@ Card title
     <button type="button" class="btn btn-danger">Danger</button>
   </div>
 </div>
+
+
+
+
+
+
+  <%
+=begin%>
+ <% @family_members.each do |family_member| %>
+
+    <div style="margin-top: 1rem; border: 1px solid black; padding: 1.5rem; border-radius: 1.5rem">
+    <%= render family_member %>
+    <p>
+      <%= link_to "Show", family_member, class: "btn btn-info"  %>
+    </p>
+    </div>
+  <% end %>
+ 
+<%
+=end%>
+

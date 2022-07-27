@@ -9152,3 +9152,2239 @@ Migrating to ChangeArray (20220726081343)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/shopping" for ::1 at 2022-07-26 17:50:55 +0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 6175)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 6290)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 10260)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_shopping_path' for #<ActionView::Base:0x0000000000d4f8>
+
+<div style="margin-bottom: 5px">'.freeze;@output_buffer.append=( link_to "New Shopping List", new_shopping_path, class: "btn btn-primary"  );@output_buffer.safe_append='</div>
+                                                                                              ^^^^^^^^^^^^^^^^^
+Did you mean?  new_polymorphic_path):
+    1: <p style="color: green"><%= notice %></p>
+    2: <h1>Shopping List</h1>
+    3: <div style="margin-bottom: 5px"><%= link_to "New Shopping List", new_shopping_path, class: "btn btn-primary"  %></div>
+    4: <div class="card" style="width: 18rem;">
+    5:   <div class="card-header">
+    6: Card title
+  
+app/views/shopping/index.html.erb:3
+Started GET "/shopping" for ::1 at 2022-07-26 17:52:48 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 5122)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5217)
+Completed 500 Internal Server Error in 14ms (Allocations: 6480)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_shopping_path' for #<ActionView::Base:0x000000000131f0>
+
+<div style="margin-bottom: 5px">'.freeze;@output_buffer.append=( link_to "New Shopping List", new_shopping_path, class: "btn btn-primary"  );@output_buffer.safe_append='</div>
+                                                                                              ^^^^^^^^^^^^^^^^^
+Did you mean?  new_polymorphic_path):
+    1: <p style="color: green"><%= notice %></p>
+    2: <h1>Shopping List</h1>
+    3: <div style="margin-bottom: 5px"><%= link_to "New Shopping List", new_shopping_path, class: "btn btn-primary"  %></div>
+    4: <div class="card" style="width: 18rem;">
+    5:   <div class="card-header">
+    6: Card title
+  
+app/views/shopping/index.html.erb:3
+Started GET "/new_shopping" for ::1 at 2022-07-26 17:52:55 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/new_shopping"):
+  
+Started GET "/new_shopping" for ::1 at 2022-07-26 17:53:47 +0700
+Processing by ShoppingController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/shopping_controller.rb:7:in `new'
+Completed 406 Not Acceptable in 9ms (ActiveRecord: 0.8ms | Allocations: 7571)
+
+
+  
+ActionController::MissingExactTemplate (ShoppingController#new is missing a template for request formats: text/html):
+  
+actionpack (7.0.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/new_shopping" for ::1 at 2022-07-26 17:54:34 +0700
+Processing by ShoppingController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/new.html.erb within layouts/application
+  Rendered shopping/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 145)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 22026)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms | Allocations: 22964)
+
+
+Started GET "/new_shopping" for ::1 at 2022-07-26 17:57:05 +0700
+Processing by ShoppingController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/new.html.erb within layouts/application
+  Rendered shopping/_form.html.erb (Duration: 9.7ms | Allocations: 5909)
+  Rendered shopping/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 6240)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 6335)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 7185)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `shopping' for #<ActionView::Base:0x00000000019a28>
+
+            @virtual_path = "shopping/_form";family_member = local_assigns[:family_member]; family_member = family_member;;@output_buffer.append=  form_with(model: shopping) do |form| @output_buffer.safe_append='
+                                                                                                                                                                    ^^^^^^^^
+Did you mean?  @shopping):
+    1: <%= form_with(model: shopping) do |form| %>
+    2:   <% if shopping.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(shopping.errors.count, "error") %> prohibited this shopping from being saved:</h2>
+  
+app/views/shopping/_form.html.erb:1
+app/views/shopping/new.html.erb:3
+Started GET "/new_shopping" for ::1 at 2022-07-26 17:57:28 +0700
+Processing by ShoppingController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/new.html.erb within layouts/application
+  Rendered shopping/_form.html.erb (Duration: 12.1ms | Allocations: 6982)
+  Rendered shopping/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 7305)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 7400)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 8247)
+
+
+  
+ActionView::Template::Error (undefined method `shoppings_path' for #<ActionView::Base:0x00000000019d98>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  shopping_path):
+    1: <%= form_with(model: shopping) do |form| %>
+    2:   <% if shopping.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(shopping.errors.count, "error") %> prohibited this shopping from being saved:</h2>
+  
+app/views/shopping/_form.html.erb:1
+app/views/shopping/new.html.erb:3
+Started GET "/new_shopping" for ::1 at 2022-07-26 17:59:16 +0700
+Processing by ShoppingController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/shopping_controller.rb:7:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/new.html.erb within layouts/application
+  Rendered shopping/_form.html.erb (Duration: 8.6ms | Allocations: 6446)
+  Rendered shopping/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 6541)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 6635)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 10275)
+
+
+  
+ActionView::Template::Error (undefined method `shoppings_path' for #<ActionView::Base:0x000000000202b0>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  shopping_path):
+    1: <%= form_with(model: shopping) do |form| %>
+    2:   <% if shopping.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(shopping.errors.count, "error") %> prohibited this shopping from being saved:</h2>
+  
+app/views/shopping/_form.html.erb:1
+app/views/shopping/new.html.erb:3
+Started GET "/new_shopping" for ::1 at 2022-07-26 20:21:06 +0700
+Processing by ShoppingController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/new.html.erb within layouts/application
+  Rendered shopping/_form.html.erb (Duration: 11.3ms | Allocations: 6413)
+  Rendered shopping/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 6497)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 6585)
+Completed 500 Internal Server Error in 14ms (Allocations: 6857)
+
+
+  
+ActionView::Template::Error (undefined method `shoppings_path' for #<ActionView::Base:0x000000000205d0>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  shopping_path):
+    1: <%= form_with(model: shopping) do |form| %>
+    2:   <% if shopping.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(shopping.errors.count, "error") %> prohibited this shopping from being saved:</h2>
+  
+app/views/shopping/_form.html.erb:1
+app/views/shopping/new.html.erb:3
+Started GET "/new_shopping" for ::1 at 2022-07-26 20:22:23 +0700
+Processing by ShoppingController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/new.html.erb within layouts/application
+  Rendered shopping/_form.html.erb (Duration: 9.5ms | Allocations: 6952)
+  Rendered shopping/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 7275)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 7369)
+Completed 500 Internal Server Error in 13ms (Allocations: 8167)
+
+
+  
+ActionView::Template::Error (undefined method `shoppings_path' for #<ActionView::Base:0x00000000020918>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  shopping_path):
+    1: <%= form_with(model: @shopping) do |form| %>
+    2:   <% if shopping.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(shopping.errors.count, "error") %> prohibited this shopping from being saved:</h2>
+  
+app/views/shopping/_form.html.erb:1
+app/views/shopping/new.html.erb:3
+Started GET "/new-order" for ::1 at 2022-07-26 20:22:48 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/new-order"):
+  
+Started GET "/" for ::1 at 2022-07-26 20:22:48 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 324)
+Completed 200 OK in 3ms (Views: 2.0ms | Allocations: 1113)
+
+
+Started GET "/shopping" for ::1 at 2022-07-26 20:22:49 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3457)
+Completed 500 Internal Server Error in 7ms (Allocations: 4357)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/shopping" for ::1 at 2022-07-26 20:36:19 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 515)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3312)
+Completed 500 Internal Server Error in 6ms (Allocations: 4125)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/new_shopping" for ::1 at 2022-07-26 20:36:21 +0700
+Processing by ShoppingController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/new.html.erb within layouts/application
+  Rendered shopping/_form.html.erb (Duration: 10.4ms | Allocations: 6942)
+  Rendered shopping/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 7231)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 7319)
+Completed 500 Internal Server Error in 12ms (Allocations: 7645)
+
+
+  
+ActionView::Template::Error (undefined method `shoppings_path' for #<ActionView::Base:0x00000000021638>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  shopping_path):
+    1: <%= form_with(model: @shopping) do |form| %>
+    2:   <% if shopping.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(shopping.errors.count, "error") %> prohibited this shopping from being saved:</h2>
+  
+app/views/shopping/_form.html.erb:1
+app/views/shopping/new.html.erb:3
+Started GET "/shopping" for ::1 at 2022-07-26 20:37:23 +0700
+  
+ArgumentError (Invalid route name, already in use: 'shopping' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/shopping" for ::1 at 2022-07-26 20:37:38 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3399)
+Completed 500 Internal Server Error in 6ms (Allocations: 4945)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBuyLists (20220726134047)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "buy_lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "location" varchar, "total" varchar, "list" text, "shopping_id" varchar, "status" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220726134047"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/shopping" for ::1 at 2022-07-26 20:43:31 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1064)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 23772)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 27771)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/shopping" for ::1 at 2022-07-26 20:43:34 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2722)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3018)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/shopping" for ::1 at 2022-07-26 20:43:57 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1064)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 23913)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 27921)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/shopping" for ::1 at 2022-07-26 20:44:02 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2722)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3018)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/shopping" for ::1 at 2022-07-26 20:44:29 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2871)
+Completed 500 Internal Server Error in 6ms (Allocations: 4134)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/shopping" for ::1 at 2022-07-26 20:44:54 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 7378)
+Completed 500 Internal Server Error in 16ms (Allocations: 8968)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `shoppings_path' for #<ActionView::Base:0x0000000001c2a0>
+
+        '.freeze;@output_buffer.append=( link_to 'Shopping List', shoppings_path, class: 'nav-link' );@output_buffer.safe_append='
+                                                                  ^^^^^^^^^^^^^^
+Did you mean?  shopping_path):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shoppings_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/shopping" for ::1 at 2022-07-26 20:45:11 +0700
+Processing by ShoppingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shopping/index.html.erb within layouts/application
+  Rendered shopping/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 636)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3372)
+Completed 500 Internal Server Error in 7ms (Allocations: 4960)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/" for ::1 at 2022-07-26 20:45:17 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 324)
+Completed 200 OK in 3ms (Views: 1.8ms | Allocations: 1143)
+
+
+Started GET "/brands" for ::1 at 2022-07-26 20:45:19 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/brands"):
+  
+Started GET "/buy_list" for ::1 at 2022-07-26 20:45:21 +0700
+  
+ActionController::RoutingError (uninitialized constant BuyListController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  BuyListsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:45:48 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  [1m[36mBuyList Load (0.2ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1988)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4707)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms | Allocations: 6177)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"shopping"}, missing required keys: [:id]
+Did you mean?  shopping_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', shopping_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:47:12 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1207)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3958)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 4803)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"buy_lists"}, missing required keys: [:id]
+Did you mean?  buy_list_url):
+    23:       </li>
+    24:       <li class="nav-item">
+    25:     
+    26:         <%= link_to 'Shopping List', buy_list_path, class: 'nav-link' %>
+    27:       </li>
+    28:       <li class="nav-item">
+    29:          <%= link_to 'Family Member', members_path, class: 'nav-link' %>
+  
+app/views/layouts/application.html.erb:26
+Started GET "/buy_list" for ::1 at 2022-07-26 20:47:15 +0700
+  
+ActionController::RoutingError (uninitialized constant BuyListController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  BuyListsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/buy_list" for ::1 at 2022-07-26 20:47:28 +0700
+  
+ActionController::RoutingError (uninitialized constant BuyListController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  BuyListsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:47:37 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1200)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2852)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 3692)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:48:00 +0700
+  
+ArgumentError (Invalid route name, already in use: 'shopping' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:48:14 +0700
+  
+ArgumentError (Invalid route name, already in use: 'shopping' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:48:32 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1721)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3100)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 4498)
+
+
+Started GET "/shopping" for ::1 at 2022-07-26 20:48:37 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/shopping"):
+  
+Started GET "/shopping" for ::1 at 2022-07-26 20:48:48 +0700
+  
+ActionController::RoutingError (uninitialized constant BuyListController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  BuyListsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/shopping" for ::1 at 2022-07-26 20:49:04 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/shopping"):
+  
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:49:15 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1730)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3109)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.5ms | Allocations: 4507)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:49:42 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1958)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 2252)
+
+
+Started GET "/members" for ::1 at 2022-07-26 20:49:43 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 1.4ms | Allocations: 399)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 7653)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 9026)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.6ms | Allocations: 10357)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:49:43 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 898)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2074)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 2382)
+
+
+Started GET "/inventory" for ::1 at 2022-07-26 20:49:44 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4077)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5686)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.6ms | Allocations: 6885)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 20:49:48 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1966)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 2259)
+
+
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 20:50:14 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 34.9ms | Allocations: 18603)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 35.7ms | Allocations: 18939)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 20220)
+Completed 200 OK in 44ms (Views: 37.8ms | ActiveRecord: 0.5ms | Allocations: 24414)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeStringToArrayForBuyList (20220726135249)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abuy_lists" ("id" integer NOT NULL PRIMARY KEY, "date" date DEFAULT NULL, "location" varchar DEFAULT NULL, "total" varchar DEFAULT NULL, "list" text DEFAULT NULL, "shopping_id" varchar DEFAULT NULL, "status" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "abuy_lists" ("id","date","location","total","list","shopping_id","status","created_at","updated_at")
+                     SELECT "id","date","location","total","list","shopping_id","status","created_at","updated_at" FROM "buy_lists"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "buy_lists"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeStringToArrayForBuyList (20220726135249)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abuy_lists" ("id" integer NOT NULL PRIMARY KEY, "date" date DEFAULT NULL, "location" varchar DEFAULT NULL, "total" varchar DEFAULT NULL, "list" text DEFAULT NULL, "shopping_id" varchar DEFAULT NULL, "status" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "abuy_lists" ("id","date","location","total","list","shopping_id","status","created_at","updated_at")
+                     SELECT "id","date","location","total","list","shopping_id","status","created_at","updated_at" FROM "buy_lists"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "buy_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "buy_lists" ("id" integer NOT NULL PRIMARY KEY, "date" date DEFAULT NULL, "location" varchar DEFAULT NULL, "total" varchar DEFAULT NULL, "list" text DEFAULT NULL, "shopping_id" varchar DEFAULT NULL, "status" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "buy_lists" ("id","date","location","total","list","shopping_id","status","created_at","updated_at")
+                     SELECT "id","date","location","total","list","shopping_id","status","created_at","updated_at" FROM "abuy_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "abuy_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220726135249"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 21:05:44 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 9.3ms | Allocations: 5211)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5835)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 26979)
+Completed 200 OK in 50ms (Views: 40.5ms | ActiveRecord: 0.4ms | Allocations: 36580)
+
+
+Started GET "/feeds" for ::1 at 2022-07-26 21:05:47 +0700
+Processing by FeedsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1367)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2740)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 4047)
+
+
+Started GET "/feeds" for ::1 at 2022-07-26 21:06:20 +0700
+Processing by FeedsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1219)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2866)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 3769)
+
+
+Started GET "/members" for ::1 at 2022-07-26 21:06:23 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.6ms | Allocations: 395)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 6060)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7434)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 8776)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 21:06:23 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:6
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2656)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 3392)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 21:06:53 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:5
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1219)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2865)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 3769)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 21:11:37 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 29.7ms | Allocations: 13914)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 14018)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 14888)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Shopping List</h1>
+
+<%= link_to "New shopping list", new_buy_list_path class: "btn btn-primary" %>
+
+<div id="buy_lists">
+  <% @buy_lists.each do |buy_list| %>
+    <%= render buy_list %>
+    <p>
+      <%= link_to "Show this buy list", buy_list %>
+    </p>
+  <% end %>
+</div>
+
+
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Shopping List</h1>
+4:    
+5:    <%= link_to "New shopping list", new_buy_list_path class: "btn btn-primary" %>
+6:    
+7:    <div id="buy_lists">
+8:      <% @buy_lists.each do |buy_list| %>
+9:        <%= render buy_list %>
+10:        <p>
+11:          <%= link_to "Show this buy list", buy_list %>
+12:        </p>
+13:      <% end %>
+14:    </div>
+  
+app/views/buy_lists/index.html.erb:5: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/buy_lists/index.html.erb:5: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/buy_lists/index.html.erb:5: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/buy_lists/index.html.erb:5: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/buy_lists/index.html.erb:5: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/buy_lists/index.html.erb:5: syntax error, unexpected label, expecting `do' or '{' or '('
+Started GET "/buy_lists" for ::1 at 2022-07-26 21:11:49 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1230)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2882)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3755)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 21:20:37 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1921)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3566)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 4436)
+
+
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 21:20:38 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 0.9ms | Allocations: 1603)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1893)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1982)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2318)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: buy_list) do |form| %>
+  <% if buy_list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+
+      <ul>
+        <% buy_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.text_field :total %>
+  </div>
+
+  <div>
+    <%= form.label :list, style: "display: block" %>
+    <%= form.select :list Buy_lists.all, {}, multiple: true %>
+  </div>
+
+  <div>
+    <%= form.label :shopping_id, style: "display: block" %>
+    <%= form.text_field :shopping_id %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: buy_list) do |form| %>
+2:      <% if buy_list.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% buy_list.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :date, style: "display: block" %>
+16:        <%= form.date_field :date %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :location, style: "display: block" %>
+21:        <%= form.text_field :location %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :total, style: "display: block" %>
+26:        <%= form.text_field :total %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.label :list, style: "display: block" %>
+31:        <%= form.select :list Buy_lists.all, {}, multiple: true %>
+32:      </div>
+33:    
+34:      <div>
+35:        <%= form.label :shopping_id, style: "display: block" %>
+36:        <%= form.text_field :shopping_id %>
+37:      </div>
+38:    
+39:      <div>
+40:        <%= form.label :status, style: "display: block" %>
+41:        <%= form.check_box :status %>
+42:      </div>
+43:    
+44:      <div>
+45:        <%= form.submit %>
+46:      </div>
+47:    <% end %>
+  
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected constant, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected constant, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected constant, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected constant, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected constant, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected constant, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/new.html.erb:3
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 21:20:55 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 1.6ms | Allocations: 1604)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1924)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2019)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2825)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: buy_list) do |form| %>
+  <% if buy_list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+
+      <ul>
+        <% buy_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.text_field :total %>
+  </div>
+
+  <div>
+    <%= form.label :list, style: "display: block" %>
+    <%= form.select :list buy_list.all, {}, multiple: true %>
+  </div>
+
+  <div>
+    <%= form.label :shopping_id, style: "display: block" %>
+    <%= form.text_field :shopping_id %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: buy_list) do |form| %>
+2:      <% if buy_list.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% buy_list.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :date, style: "display: block" %>
+16:        <%= form.date_field :date %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :location, style: "display: block" %>
+21:        <%= form.text_field :location %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :total, style: "display: block" %>
+26:        <%= form.text_field :total %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.label :list, style: "display: block" %>
+31:        <%= form.select :list buy_list.all, {}, multiple: true %>
+32:      </div>
+33:    
+34:      <div>
+35:        <%= form.label :shopping_id, style: "display: block" %>
+36:        <%= form.text_field :shopping_id %>
+37:      </div>
+38:    
+39:      <div>
+40:        <%= form.label :status, style: "display: block" %>
+41:        <%= form.check_box :status %>
+42:      </div>
+43:    
+44:      <div>
+45:        <%= form.submit %>
+46:      </div>
+47:    <% end %>
+  
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected local variable or method, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected local variable or method, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected local variable or method, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected local variable or method, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected local variable or method, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected local variable or method, expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/buy_lists/new.html.erb:3
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 21:21:04 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 25.1ms | Allocations: 16393)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 25.9ms | Allocations: 16759)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 18427)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms | Allocations: 19289)
+
+
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 21:54:03 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 3.2ms | Allocations: 2817)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3170)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4797)
+Completed 200 OK in 8ms (Views: 7.1ms | Allocations: 5684)
+
+
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 21:55:08 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 4.3ms | Allocations: 2892)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3245)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4872)
+Completed 200 OK in 10ms (Views: 9.7ms | Allocations: 5730)
+
+
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 21:55:40 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 4.2ms | Allocations: 6463)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 6784)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 6878)
+Completed 500 Internal Server Error in 7ms (Allocations: 7712)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x0000000112132488>::List
+
+    '.freeze;@output_buffer.append=( form.select :list ,List.all , {
+                                                        ^^^^):
+    28: 
+    29:   <div>
+    30:     <%= form.label :list, style: "display: block" %>
+    31:     <%= form.select :list ,List.all , {
+    32:       'pens': 'pens',
+    33:       'papers': 'papers',
+    34:       'shampoo': 'shampoo'
+  
+app/views/buy_lists/_form.html.erb:31
+app/views/buy_lists/_form.html.erb:1
+app/views/buy_lists/new.html.erb:3
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 21:55:51 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 7.4ms | Allocations: 7491)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 7810)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 7904)
+Completed 500 Internal Server Error in 11ms (Allocations: 8728)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `list' for #<ActionView::Base:0x0000000000f5f0>
+
+    '.freeze;@output_buffer.append=( form.select :list ,list.all , {
+                                                        ^^^^):
+    28: 
+    29:   <div>
+    30:     <%= form.label :list, style: "display: block" %>
+    31:     <%= form.select :list ,list.all , {
+    32:       'pens': 'pens',
+    33:       'papers': 'papers',
+    34:       'shampoo': 'shampoo'
+  
+app/views/buy_lists/_form.html.erb:31
+app/views/buy_lists/_form.html.erb:1
+app/views/buy_lists/new.html.erb:3
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 21:56:03 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 3.5ms | Allocations: 2870)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3223)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4857)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 5709)
+
+
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:25:38 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 4.1ms | Allocations: 2742)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3098)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4734)
+Completed 200 OK in 10ms (Views: 9.6ms | Allocations: 5593)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeArrayToTextForBuyList (20220726152624)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abuy_lists" ("id" integer NOT NULL PRIMARY KEY, "date" date DEFAULT NULL, "location" varchar DEFAULT NULL, "total" varchar DEFAULT NULL, "list" text DEFAULT NULL, "shopping_id" varchar DEFAULT NULL, "status" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "abuy_lists" ("id","date","location","total","list","shopping_id","status","created_at","updated_at")
+                     SELECT "id","date","location","total","list","shopping_id","status","created_at","updated_at" FROM "buy_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "buy_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "buy_lists" ("id" integer NOT NULL PRIMARY KEY, "date" date DEFAULT NULL, "location" varchar DEFAULT NULL, "total" varchar DEFAULT NULL, "list" text DEFAULT NULL, "shopping_id" varchar DEFAULT NULL, "status" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "buy_lists" ("id","date","location","total","list","shopping_id","status","created_at","updated_at")
+                     SELECT "id","date","location","total","list","shopping_id","status","created_at","updated_at" FROM "abuy_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "abuy_lists"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220726152624"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:27:33 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 9.5ms | Allocations: 5211)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 5835)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 27437)
+Completed 200 OK in 50ms (Views: 39.0ms | ActiveRecord: 0.4ms | Allocations: 37037)
+
+
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:28:34 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 23.1ms | Allocations: 15239)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 24.0ms | Allocations: 15569)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 15665)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 16569)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: buy_list) do |form| %>
+  <% if buy_list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+
+      <ul>
+        <% buy_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.text_field :total class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :list, style: "display: block" %>
+   <%= form.text_area :list class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :shopping_id, style: "display: block" %>
+    <%= form.text_field :shopping_id class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.check_box :status class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: buy_list) do |form| %>
+2:      <% if buy_list.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% buy_list.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :date, style: "display: block" %>
+16:        <%= form.date_field :date class: "form-control" %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :location, style: "display: block" %>
+21:        <%= form.text_field :location class: "form-control" %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :total, style: "display: block" %>
+26:        <%= form.text_field :total class: "form-control" %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.label :list, style: "display: block" %>
+31:       <%= form.text_area :list class: "form-control" %>
+32:      </div>
+33:    
+34:      <div>
+35:        <%= form.label :shopping_id, style: "display: block" %>
+36:        <%= form.text_field :shopping_id class: "form-control" %>
+37:      </div>
+38:    
+39:      <div>
+40:        <%= form.label :status, style: "display: block" %>
+41:        <%= form.check_box :status class: "form-control" %>
+42:      </div>
+43:    
+44:      <div>
+45:        <%= form.submit class: "btn btn-primary" %>
+46:      </div>
+47:    <% end %>
+  
+app/views/buy_lists/_form.html.erb:16: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:21: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:26: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:36: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:41: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:16: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:21: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:26: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:36: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:41: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:16: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:21: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:26: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:36: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:41: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:16: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:21: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:26: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:36: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:41: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:16: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:21: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:26: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:36: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:41: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:16: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:21: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:26: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:36: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/_form.html.erb:41: syntax error, unexpected `class', expecting ')'
+app/views/buy_lists/new.html.erb:3
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:29:03 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 1.0ms | Allocations: 1619)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1939)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2035)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2886)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: buy_list) do |form| %>
+  <% if buy_list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+
+      <ul>
+        <% buy_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.text_field :total, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :list, style: "display: block" %>
+   <%= form.text_area :list, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :shopping_id, style: "display: block" %>
+    <%= form.text_field :shopping_id, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.check_box :status, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit, class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: buy_list) do |form| %>
+2:      <% if buy_list.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% buy_list.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :date, style: "display: block" %>
+16:        <%= form.date_field :date, class: "form-control" %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :location, style: "display: block" %>
+21:        <%= form.text_field :location, class: "form-control" %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :total, style: "display: block" %>
+26:        <%= form.text_field :total, class: "form-control" %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.label :list, style: "display: block" %>
+31:       <%= form.text_area :list, class: "form-control" %>
+32:      </div>
+33:    
+34:      <div>
+35:        <%= form.label :shopping_id, style: "display: block" %>
+36:        <%= form.text_field :shopping_id, class: "form-control" %>
+37:      </div>
+38:    
+39:      <div>
+40:        <%= form.label :status, style: "display: block" %>
+41:        <%= form.check_box :status, class: "form-control" %>
+42:      </div>
+43:    
+44:      <div>
+45:        <%= form.submit, class: "btn btn-primary" %>
+46:      </div>
+47:    <% end %>
+  
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/new.html.erb:3
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:29:18 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 4.1ms | Allocations: 2817)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3170)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4806)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 5668)
+
+
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:29:55 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 1.1ms | Allocations: 1618)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1938)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2033)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2872)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: buy_list) do |form| %>
+  <% if buy_list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+
+      <ul>
+        <% buy_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.text_field :total, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :list, style: "display: block" %>
+   <%= form.text_area :list, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :shopping_id, style: "display: block" %>
+    <%= form.text_field :shopping_id, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.check_box :status, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit, class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: buy_list) do |form| %>
+2:      <% if buy_list.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% buy_list.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :date, style: "display: block" %>
+16:        <%= form.date_field :date, class: "form-control" %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :location, style: "display: block" %>
+21:        <%= form.text_field :location, class: "form-control" %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :total, style: "display: block" %>
+26:        <%= form.text_field :total, class: "form-control" %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.label :list, style: "display: block" %>
+31:       <%= form.text_area :list, class: "form-control" %>
+32:      </div>
+33:    
+34:      <div>
+35:        <%= form.label :shopping_id, style: "display: block" %>
+36:        <%= form.text_field :shopping_id, class: "form-control" %>
+37:      </div>
+38:    
+39:      <div>
+40:        <%= form.label :status, style: "display: block" %>
+41:        <%= form.check_box :status, class: "form-control" %>
+42:      </div>
+43:    
+44:      <div>
+45:        <%= form.submit, class: "btn btn-primary" %>
+46:      </div>
+47:    <% end %>
+  
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/new.html.erb:3
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:30:17 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 0.9ms | Allocations: 1618)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1938)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2033)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2866)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: buy_list) do |form| %>
+  <% if buy_list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+
+      <ul>
+        <% buy_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.text_field :total, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :list, style: "display: block" %>
+   <%= form.text_area :list, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :shopping_id, style: "display: block" %>
+    <%= form.text_field :shopping_id, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.check_box :status, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit, class="btn btn-primary" %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: buy_list) do |form| %>
+2:      <% if buy_list.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% buy_list.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :date, style: "display: block" %>
+16:        <%= form.date_field :date, class: "form-control" %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :location, style: "display: block" %>
+21:        <%= form.text_field :location, class: "form-control" %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :total, style: "display: block" %>
+26:        <%= form.text_field :total, class: "form-control" %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.label :list, style: "display: block" %>
+31:       <%= form.text_area :list, class: "form-control" %>
+32:      </div>
+33:    
+34:      <div>
+35:        <%= form.label :shopping_id, style: "display: block" %>
+36:        <%= form.text_field :shopping_id, class: "form-control" %>
+37:      </div>
+38:    
+39:      <div>
+40:        <%= form.label :status, style: "display: block" %>
+41:        <%= form.check_box :status, class: "form-control" %>
+42:      </div>
+43:    
+44:      <div>
+45:        <%= form.submit, class="btn btn-primary" %>
+46:      </div>
+47:    <% end %>
+  
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected '='
+app/views/buy_lists/new.html.erb:3
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:30:36 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 1.0ms | Allocations: 1619)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1939)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2034)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2867)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: buy_list) do |form| %>
+  <% if buy_list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+
+      <ul>
+        <% buy_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.text_field :total, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :list, style: "display: block" %>
+   <%= form.text_area :list, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :shopping_id, style: "display: block" %>
+    <%= form.text_field :shopping_id, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.check_box :status, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit, class:"btn btn-primary" %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: buy_list) do |form| %>
+2:      <% if buy_list.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(buy_list.errors.count, "error") %> prohibited this buy_list from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% buy_list.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :date, style: "display: block" %>
+16:        <%= form.date_field :date, class: "form-control" %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :location, style: "display: block" %>
+21:        <%= form.text_field :location, class: "form-control" %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :total, style: "display: block" %>
+26:        <%= form.text_field :total, class: "form-control" %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.label :list, style: "display: block" %>
+31:       <%= form.text_area :list, class: "form-control" %>
+32:      </div>
+33:    
+34:      <div>
+35:        <%= form.label :shopping_id, style: "display: block" %>
+36:        <%= form.text_field :shopping_id, class: "form-control" %>
+37:      </div>
+38:    
+39:      <div>
+40:        <%= form.label :status, style: "display: block" %>
+41:        <%= form.check_box :status, class: "form-control" %>
+42:      </div>
+43:    
+44:      <div>
+45:        <%= form.submit, class:"btn btn-primary" %>
+46:      </div>
+47:    <% end %>
+  
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/_form.html.erb:45: syntax error, unexpected label, expecting '='
+app/views/buy_lists/new.html.erb:3
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:31:06 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 3.7ms | Allocations: 2822)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3175)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4811)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 5673)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 22:31:11 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1214)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2390)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 2837)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 22:33:48 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 796)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1972)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 2249)
+
+
+Started GET "/members" for ::1 at 2022-07-26 22:33:48 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.7ms | Allocations: 394)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 6104)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 7477)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.6ms | Allocations: 8808)
+
+
+Started GET "/feeds" for ::1 at 2022-07-26 22:33:49 +0700
+Processing by FeedsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[36mFeed Load (0.6ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1319)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2698)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 3983)
+
+
+Started GET "/members" for ::1 at 2022-07-26 22:33:50 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2191)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 2484)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 22:33:52 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1963)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 2235)
+
+
+Started GET "/buy_lists/new" for ::1 at 2022-07-26 22:33:53 +0700
+Processing by BuyListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/new.html.erb within layouts/application
+  Rendered buy_lists/_form.html.erb (Duration: 2.6ms | Allocations: 2202)
+  Rendered buy_lists/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2311)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3486)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3767)
+
+
+Started POST "/buy_lists" for ::1 at 2022-07-26 22:35:25 +0700
+Processing by BuyListsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "buy_list"=>{"date"=>"2022-07-28", "location"=>"Super Grocery", "total"=>"250", "list"=>"shampoo(Men), 100, 1\r\nrazor, 150, 1", "shopping_id"=>"S0001", "status"=>"0"}, "commit"=>"Create Buy list"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/buy_lists_controller.rb:27:in `block in create'
+  [1m[36mBuyList Create (0.8ms)[0m  [1m[32mINSERT INTO "buy_lists" ("date", "location", "total", "list", "shopping_id", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2022-07-28"], ["location", "Super Grocery"], ["total", "250"], ["list", "shampoo(Men), 100, 1\r\nrazor, 150, 1"], ["shopping_id", "S0001"], ["status", 0], ["created_at", "2022-07-26 15:35:25.774367"], ["updated_at", "2022-07-26 15:35:25.774367"]]
+  ↳ app/controllers/buy_lists_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/buy_lists_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/buy_lists/1
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms | Allocations: 3850)
+
+
+Started GET "/buy_lists/1" for ::1 at 2022-07-26 22:35:25 +0700
+Processing by BuyListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBuyList Load (0.2ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists" WHERE "buy_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buy_lists_controller.rb:63:in `set_buy_list'
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/show.html.erb within layouts/application
+  Rendered buy_lists/_buy_list.html.erb (Duration: 1.2ms | Allocations: 302)
+  Rendered buy_lists/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2680)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 5386)
+
+
+Started GET "/inventory" for ::1 at 2022-07-26 22:35:39 +0700
+Processing by InventoryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4088)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5704)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.8ms | Allocations: 6951)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 22:35:39 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/_buy_list.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2182)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 2475)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 22:38:42 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/_buy_list.html.erb (Duration: 0.7ms | Allocations: 290)
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1778)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3422)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4285)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 22:39:32 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/_buy_list.html.erb (Duration: 0.8ms | Allocations: 290)
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1811)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3455)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 4328)
+
+
+Started GET "/feeds" for ::1 at 2022-07-26 22:39:57 +0700
+Processing by FeedsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1224)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2589)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 3270)
+
+
+Started GET "/feeds/new" for ::1 at 2022-07-26 22:40:00 +0700
+Processing by FeedsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/new.html.erb within layouts/application
+  Rendered feeds/_form.html.erb (Duration: 4.2ms | Allocations: 2733)
+  Rendered feeds/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3050)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4230)
+Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 0.5ms | Allocations: 7863)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 22:40:04 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.1ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/_buy_list.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1031)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2209)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 2482)
+
+
+Started GET "/members" for ::1 at 2022-07-26 22:40:07 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.8ms | Allocations: 324)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1858)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3215)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 3868)
+
+
+Started GET "/feeds" for ::1 at 2022-07-26 23:12:38 +0700
+Processing by FeedsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/feeds/index.html.erb:6
+  [1m[36mFeed Load (0.3ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1461)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2636)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 2926)
+
+
+Started GET "/members" for ::1 at 2022-07-26 23:12:41 +0700
+Processing by FamilyMembersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering family_members/index.html.erb within layouts/application
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/views/family_members/index.html.erb:8
+  Rendered family_members/_family_member.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered family_members/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 986)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2161)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 2433)
+
+
+Started GET "/buy_lists" for ::1 at 2022-07-26 23:12:44 +0700
+Processing by BuyListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buy_lists/index.html.erb within layouts/application
+  [1m[36mBuyList Load (0.4ms)[0m  [1m[34mSELECT "buy_lists".* FROM "buy_lists"[0m
+  ↳ app/views/buy_lists/index.html.erb:8
+  Rendered buy_lists/_buy_list.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered buy_lists/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2216)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 2487)
+
+
+Started GET "/feeds" for ::1 at 2022-07-26 23:13:27 +0700
+Processing by FeedsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1963)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 2232)
+
+
+Started GET "/feeds/new" for ::1 at 2022-07-26 23:13:28 +0700
+Processing by FeedsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/new.html.erb within layouts/application
+  Rendered feeds/_form.html.erb (Duration: 3.0ms | Allocations: 2000)
+  Rendered feeds/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2109)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3284)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3567)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220726161723)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220726161723"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConfirmationAndPasswordColumnsToUsers (20220726161854)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" datetime(6)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220726161854"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/feeds" for ::1 at 2022-07-26 23:24:18 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FeedsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering feeds/index.html.erb within layouts/application
+  [1m[36mFeed Load (0.4ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds"[0m
+  ↳ app/views/feeds/index.html.erb:6
+  Rendered feeds/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1763)
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 23239)
+Completed 200 OK in 48ms (Views: 40.2ms | ActiveRecord: 0.4ms | Allocations: 27349)
+
+

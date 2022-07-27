@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_26_081343) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_26_161854) do
+  create_table "buy_lists", force: :cascade do |t|
+    t.date "date"
+    t.string "location"
+    t.string "total"
+    t.text "list"
+    t.string "shopping_id"
+    t.boolean "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "families", force: :cascade do |t|
     t.string "fam_id"
     t.string "fam_name"
@@ -75,6 +86,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_26_081343) do
     t.datetime "updated_at", null: false
     t.boolean "status"
     t.string "shopping_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "confirmed_at"
+    t.string "password_digest"
   end
 
 end

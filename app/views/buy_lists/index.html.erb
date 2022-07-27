@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Shopping List</h1>
+
+<%= link_to "New shopping list", new_buy_list_path, class: "btn btn-primary" %>
+
+<div id="buy_lists">
+  <% @buy_lists.each do |buy_list| %>
+   <div style="margin-top: 1rem; border: 1px solid black; padding: 1.5rem; border-radius: 1.5rem">
+    <%= render buy_list %>
+    <p>
+      <%= link_to "Show this buy list", buy_list, class: "btn btn-info" %>
+    </p>
+  </div>
+  <% end %>
+</div>
+
+

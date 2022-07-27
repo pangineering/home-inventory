@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
+  resources :buy_lists
   resources :feeds
   resources :family_members
   resources :families
+  
   #root "inventory#index", :as => "inventory"
   get 'inventory', to: "inventory#index", :as =>'inventory'
 
-  get 'shopping', to: "shopping#index"
+  get 'buy_lists', to: "buy_list#index", :as =>'shopping'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   #get 'members', to: "member#index", :as => 'members'
   get 'feed', to: "feeds#index"
-
+  #get 'new_shopping', to: "shopping#new"
   get 'new_inventory', to: "inventory#new"
   get 'inventory/:item_id/edit', to: "inventory#edit"
   #get 'new_member', to: "member#new"
