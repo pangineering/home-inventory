@@ -1,4 +1,5 @@
 class InventoryController < ApplicationController
+  include Authentication
   def index
     @inventory = Inventory.all
   end
