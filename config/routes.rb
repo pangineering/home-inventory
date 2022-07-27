@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get 'members', to: "family_members#index", :as => 'members'
   resources :inventory
   # Defines the root path route ("/")
-  #root "articles#index"
+  root "landing#index"
   post "login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
   get "login", to: "sessions#new"
