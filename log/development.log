@@ -15045,3 +15045,111 @@ Processing by LandingController#index as HTML
 Completed 200 OK in 5ms (Views: 3.6ms | Allocations: 2894)
 
 
+Started GET "/" for ::1 at 2022-07-30 00:35:19 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 440)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2061)
+Completed 200 OK in 6ms (Views: 4.6ms | Allocations: 3451)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:35:41 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 443)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2045)
+Completed 200 OK in 6ms (Views: 5.1ms | Allocations: 3153)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:35:48 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 443)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2044)
+Completed 200 OK in 5ms (Views: 3.9ms | Allocations: 3123)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:36:16 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 447)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2049)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 3111)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:38:09 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 447)
+  Rendered layout layouts/application.html.erb (Duration: 837.3ms | Allocations: 6079)
+Completed 200 OK in 840ms (Views: 839.0ms | Allocations: 7169)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:38:25 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 316.3ms | Allocations: 3620)
+Completed 200 OK in 318ms (Views: 316.9ms | Allocations: 4122)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:38:38 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 385.9ms | Allocations: 3612)
+Completed 200 OK in 387ms (Views: 386.7ms | Allocations: 4072)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:38:47 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 384.4ms | Allocations: 3615)
+Completed 200 OK in 386ms (Views: 385.1ms | Allocations: 4087)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:38:56 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 309.5ms | Allocations: 3615)
+Completed 200 OK in 311ms (Views: 310.2ms | Allocations: 4093)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:39:27 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 300.6ms | Allocations: 3611)
+Completed 200 OK in 302ms (Views: 301.2ms | Allocations: 4068)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:42:34 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 460)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2059)
+Completed 200 OK in 6ms (Views: 4.8ms | Allocations: 3073)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:43:10 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 453)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2052)
+Completed 200 OK in 6ms (Views: 4.8ms | Allocations: 3137)
+
+

@@ -1,4 +1,4 @@
-<h1>Home Inventory</h1>
+<h1 style="text-align: center;">Home Inventory</h1>
 <% if current_user.present?  %>
 <h2>User Info</h2>
 <h2>House</h2>
@@ -6,7 +6,16 @@
 <p><strong>House ID: </strong></p>
 <p><strong>House Member: </strong></p>
 <% else %>
-<%= link_to "New family", new_family_path %>
+<div class="row">
+<div class="col-8">
+<h2>About</h2>
+</div>
+<div class="col-4">
+<h2>Creating a new Family</h2>
+<%= link_to "New family", new_family_path ,class: "btn btn-primary"%>
+<h2>Creating a new Account or Sign in</h2>
 <%= link_to "Sign In", login_path, class: "btn btn-secondary" %>
 <%= link_to "Sign Up", sign_up_path, class: "btn btn-secondary" %>
+</div>
+</div>
 <% end %>
