@@ -7,13 +7,13 @@
 <p><strong>House Member: </strong></p>
 <% else %>
 <div class="row">
-<div class="col-8">
-<h2>About</h2>
+<div class="col-6">
+<h2 style="text-align: center;">About</h2>
 </div>
-<div class="col-4">
-<h2>Creating a new Family</h2>
+<div class="col-6">
+<h2 style="text-align: center;" >Creating a new Family</h2>
 <%= link_to "New family", new_family_path ,class: "btn btn-primary"%>
-<h2>Creating a new Account or Sign in</h2>
+<h2 style="text-align: center;" >Creating a new Account or Sign in</h2>
 <%= link_to "Sign In", login_path, class: "btn btn-secondary" %>
 <%= link_to "Sign Up", sign_up_path, class: "btn btn-secondary" %>
 </div>

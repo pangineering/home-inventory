@@ -15153,3 +15153,30 @@ Processing by LandingController#index as HTML
 Completed 200 OK in 6ms (Views: 4.8ms | Allocations: 3137)
 
 
+Started GET "/" for ::1 at 2022-07-30 00:44:21 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 453)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2052)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 3126)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:44:37 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 453)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2052)
+Completed 200 OK in 6ms (Views: 4.7ms | Allocations: 3116)
+
+
+Started GET "/" for ::1 at 2022-07-30 00:44:55 +0700
+Processing by LandingController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 454)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2053)
+Completed 200 OK in 6ms (Views: 4.9ms | Allocations: 3112)
+
+
