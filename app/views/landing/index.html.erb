@@ -2,9 +2,11 @@
 <% if current_user.present?  %>
 <h2>User Info</h2>
 <h2>House</h2>
+
 <p><strong>House ID: </strong></p>
 <p><strong>House Member: </strong></p>
 <% else %>
+<%= link_to "New family", new_family_path %>
 <%= link_to "Sign In", login_path, class: "btn btn-secondary" %>
 <%= link_to "Sign Up", sign_up_path, class: "btn btn-secondary" %>
 <% end %>

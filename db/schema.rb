@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_26_161854) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_29_044455) do
   create_table "buy_lists", force: :cascade do |t|
     t.date "date"
     t.string "location"
@@ -94,6 +94,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_26_161854) do
     t.datetime "updated_at", null: false
     t.datetime "confirmed_at"
     t.string "password_digest"
+    t.string "family_id"
+    t.string "user_id"
   end
 
 end

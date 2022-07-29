@@ -1,6 +1,6 @@
 class FamiliesController < ApplicationController
   before_action :set_family, only: %i[ show edit update destroy ]
-
+  skip_before_action :require_login  
   # GET /families or /families.json
   def index
     @families = Family.all

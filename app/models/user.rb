@@ -7,7 +7,10 @@ class User < ApplicationRecord
     before_save :downcase_email
   
     validates :email, format: {with: URI::MailTo::EMAIL_REGEXP}, presence: true, uniqueness: true
-  
+    
+    has_many :inventory
+    has_many :shopping
+
     def confirm!
       update_columns(confirmed_at: Time.current)
     end

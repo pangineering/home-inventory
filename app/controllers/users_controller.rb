@@ -1,4 +1,5 @@
 # app/controllers/users_controller.rb
+require 'securerandom'
 class UsersController < ApplicationController
     skip_before_action :require_login
     def create
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
     private
   
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      user_id = SecureRandom.uuid
+      params.require(:user).permit(user_id,:email, :password, :password_confirmation, :family_id)
     end
 end
