@@ -14265,3 +14265,67 @@ Processing by LandingController#index as HTML
 Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 3740)
 
 
+Started GET "/logout" for ::1 at 2022-07-27 18:01:38 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/log_out" for ::1 at 2022-07-27 18:01:47 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/log_out"):
+  
+Started GET "/login" for ::1 at 2022-07-27 18:33:04 +0700
+Processing by SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+Redirected to http://localhost:3000/inventory
+Filter chain halted as :redirect_if_authenticated rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms | Allocations: 1794)
+
+
+Started GET "/inventory" for ::1 at 2022-07-27 18:33:04 +0700
+Processing by InventoryController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering inventory/index.html.erb within layouts/application
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/views/inventory/index.html.erb:17
+  Rendered inventory/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1109)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2562)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 3927)
+
+
+Started GET "/" for ::1 at 2022-07-27 18:33:05 +0700
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1281)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 2330)
+
+
+Started GET "/logout" for ::1 at 2022-07-27 18:33:16 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2022-07-27 20:36:31 +0700
+Processing by LandingController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:27:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1559)
+Completed 200 OK in 12ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 6717)
+
+
+Started GET "/logout" for ::1 at 2022-07-27 20:36:33 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
