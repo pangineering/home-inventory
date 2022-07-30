@@ -7,16 +7,21 @@
 <p><strong>House Member: </strong></p>
 
 <% else %>
-<div class="row">
-<div class="col-6">
-<h2 style="text-align: center;">About</h2>
+<div class="row" style="padding: 1rem" >
+<div class="col-md-6 col-sm-12" style="display: flex; justify-content: center" >
+
+<div style="display: flex; justify-content: center; padding: 1rem; flex-direction: column"><%= image_tag "image.png",class: 'img-fluid' %></div>
 </div>
-<div class="col-6">
-<h2 style="text-align: center;" >Creating a new Family</h2>
-<%= link_to "New family", new_family_path ,class: "btn btn-primary"%>
-<h2 style="text-align: center;" >Creating a new Account or Sign in</h2>
-<%= link_to "Sign In", login_path, class: "btn btn-secondary" %>
-<%= link_to "Sign Up", sign_up_path, class: "btn btn-secondary" %>
+<div class="col-md-6 col-sm-12">
+<h2>Creating a new Family</h2>
+<br />
+<%= link_to "New family", new_family_path ,class: "btn btn-primary btn-block"%>
+<br />
+<h2>Creating a new Account or Sign in</h2>
+<br />
+<%= link_to "Sign In", login_path, class: "btn btn-secondary btn-block" %>
+<br />
+<%= link_to "Sign Up", sign_up_path, class: "btn btn-secondary btn-block" %>
 </div>
 </div>
 <% end %>
